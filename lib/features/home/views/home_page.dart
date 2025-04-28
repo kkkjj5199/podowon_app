@@ -18,11 +18,11 @@ class HomePage extends ConsumerStatefulWidget {
 class _HomePageState extends ConsumerState<HomePage> {
   int _currentIndex = 0;
 
-  final List<Widget> _pages = const [
+  final List<Widget> _pages = [
     HomeTab(),
-    WorshipTab(),
-    CalendarTab(),
-    SettingTab(),
+    const WorshipTab(),
+    const CalendarTab(),
+    const SettingTab(),
   ];
 
   @override
@@ -61,8 +61,8 @@ class _HomePageState extends ConsumerState<HomePage> {
             label: '예배',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
-            label: '일정',
+            icon: Icon(FontAwesomeIcons.heart),
+            label: '말씀',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),

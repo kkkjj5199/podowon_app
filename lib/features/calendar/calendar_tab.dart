@@ -7,10 +7,10 @@ class CalendarTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('일정'),
+        title: const Text('말씀'),
       ),
       body: const Center(
-        child: Text('일정 화면'),
+        child: Text('말씀 화면'),
       ),
     );
   }
