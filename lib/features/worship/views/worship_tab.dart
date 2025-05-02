@@ -6,11 +6,21 @@ class WorshipTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
+        shadowColor: Colors.transparent,
+        elevation: 0,
+        backgroundColor: Colors.yellow,
         title: const Text('예배'),
       ),
-      body: const Center(
-        child: Text('예배 화면'),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(height: 500, color: Colors.red),
+            Container(height: 500, color: Colors.black),
+          ],
+        ),
       ),
     );
   }

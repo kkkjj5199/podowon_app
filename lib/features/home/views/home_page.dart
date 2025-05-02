@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:podowon_church_app/features/setting/views/setting_tab_not_login.dart';
 import '../../../themes/color.dart';
 import '../../calendar/calendar_tab.dart';
-import '../../setting/views/setting_tab.dart';
 import '../../worship/views/worship_tab.dart';
 import 'home_tab.dart';
 
@@ -22,23 +22,24 @@ class _HomePageState extends ConsumerState<HomePage> {
     HomeTab(),
     const WorshipTab(),
     const CalendarTab(),
-    const SettingTab(),
+    const LoginPage()
+    // const SettingTab(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_currentIndex],
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            _currentIndex = 0; // 홈으로 이동
-          });
-        },
-        backgroundColor: PodowonColor.mainColor,
-        child: Icon(Icons.home, color: Colors.white),
-        shape: CircleBorder(),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     setState(() {
+      //       _currentIndex = 0; // 홈으로 이동
+      //     });
+      //   },
+      //   backgroundColor: PodowonColor.mainColor,
+      //   child: Icon(Icons.home, color: Colors.white),
+      //   shape: CircleBorder(),
+      // ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -66,7 +67,7 @@ class _HomePageState extends ConsumerState<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: '설정',
+            label: '내 정보',
           ),
         ],
       ),

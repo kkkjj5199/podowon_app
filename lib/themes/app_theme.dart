@@ -8,10 +8,10 @@ class AppTheme {
       seedColor: PodowonColor.mainColor,
       brightness: Brightness.light,
     ),
-    appBarTheme: AppBarTheme(
-      backgroundColor: PodowonColor.mainColor,
-      foregroundColor: Colors.white, // 타이틀 색상
-    ),
+    // appBarTheme: AppBarTheme(
+    //   backgroundColor: PodowonColor.mainColor,
+    //   foregroundColor: Colors.white, // 타이틀 색상
+    // ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: PodowonColor.mainColor,
       unselectedItemColor: Colors.grey,

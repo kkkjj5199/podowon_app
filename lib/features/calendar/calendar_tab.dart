@@ -6,7 +6,9 @@ class CalendarTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: const Text('말씀'),
       ),
       body: const Center(

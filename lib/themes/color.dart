@@ -4,6 +4,7 @@ class PodowonColor {
   static const Color mainColor = Color(0xFFE05206);
 
 
+  static const Color white = Color(0xFFFFFFFF);
   static const Color grey50 = Color(0xFFFAFAFA);
   static const Color grey100 = Color(0xFFF5F5F5);
   static const Color grey200 = Color(0xFFEEEEEE);

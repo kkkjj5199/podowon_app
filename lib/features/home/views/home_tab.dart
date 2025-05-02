@@ -1,12 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:podowon_church_app/features/home/views/home_menu.dart';
-import 'package:podowon_church_app/features/home/widgets/home_card.dart';
+import 'package:podowon_church_app/features/home/widgets/home_menu_card.dart';
 import 'package:podowon_church_app/themes/color.dart';
 
 class HomeTab extends StatefulWidget {
-   HomeTab({super.key});
+   const HomeTab({super.key});
 
   @override
   State<HomeTab> createState() => _HomeTabState();
@@ -50,11 +49,15 @@ class _HomeTabState extends State<HomeTab> {
   }
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        scrolledUnderElevation: 0,
+        elevation: 0,
+        backgroundColor: Colors.white,
         title: Container(
+          // color: Colors.white,
           alignment: Alignment.topLeft,
           height: 80,
           padding: EdgeInsets.symmetric(vertical: 20),
@@ -84,21 +87,17 @@ class _HomeTabState extends State<HomeTab> {
             ),
           ),
           SliverToBoxAdapter(
-            child: Container(
-                child: HomeMenu())
+            child: Padding(
+              padding: EdgeInsets.only(top: 15.0),
+              child: HomeMenuCard(),
+            )
           ),
           SliverToBoxAdapter(
-            child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Divider(
-                color: PodowonColor.grey200,
-                thickness: 5,
-              ),
+            child: Divider(
+              color: PodowonColor.grey200,
+              thickness: 5,
             ),
           ),
-
-
-
         ],
       ),
     );
